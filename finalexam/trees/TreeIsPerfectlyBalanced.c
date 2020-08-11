@@ -7,7 +7,7 @@ int nNodes(Tree t);
 
 bool TreeIsPerfectlyBalanced(Tree t) {
     // if tree = NULL then it is balanced by default
-    // else, need to satisfy abs(nnodes(left)-nnodes(right)) <= 1
+    // else, need to satisfy abs(nNodes(left)-nNodes(right)) <= 1
     // and rest of tree is perfectly balanced
     return (t == NULL || (TreeIsPerfectlyBalanced(t->left) && TreeIsPerfectlyBalanced(t->right) && 
     abs(nNodes(t->left) - nNodes(t->right) <= 1)));
